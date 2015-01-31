@@ -1,0 +1,9 @@
+<template name="Message">
+	{{#if content}}
+	<div class="ui {{level}} message">
+		<i class="close icon"></i>
+		<div class="header error-header">{{header}}</div>
+		<p><div class="error-message">{{content}}</div></p>
+	</div>
+	{{/if}}
+</template>

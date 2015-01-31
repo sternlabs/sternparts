@@ -1,0 +1,33 @@
+<template name="ImportDigikey_upload">
+	UploadCSV
+	<div class="ui segment">
+		<div class="ui dimmer">
+			<div class="ui text loader">Loading</div>
+		</div>
+	</div>
+	<form id="upload_form">
+		<div class="file-selected">
+			<input type="file" id="upload_file">
+		</div>
+	</form>
+</template>
+
+<template name="ImportDigikey_list">
+	<button class="import-selected">Import selected</button>
+	<div class="ui celled list">
+		{{#each list}}
+			{{> ImportDigikey_item}}
+		{{/each}}
+	</div>
+</template>
+
+<template name="ImportDigikey_item">
+	<div class="item">
+		<input type="checkbox" checked="{{checked}}" class="toggle-checked" />
+		<!-- <img class="ui avatar image" src="{{Image}}"> -->
+		<div class="content">
+			<div class="header">{{[Part Number]}}</div>
+			{{Description}}
+		</div>
+	</div>
+</template>
